@@ -24,14 +24,45 @@
                 <h4 class="text-sky-200">tech4realty</h4>
             </div>
         </div>
-        
+
         <div class="px-7">
-            
-              <a href="https://www.facebook.com/alvee.55"> <button class="border w-full p-3 mb-4 bg-[#25D366] rounded-3xl text-lg text-black"> Contact Me</button></a> 
-            
-          </div>     
+
+            <a href="https://www.facebook.com/alvee.55"> <button
+                    class="border w-full p-3 mb-4 bg-[#25D366] rounded-3xl text-lg text-black"> Contact Me</button></a>
+
+        </div>
     </div>
 
+    <div class="mt-10">
+        <h2 class="text-center font-bold text-2xl mb-5">Text To voice</h2>
+          <input id="input"
+            class="w-full p-2 border border-gray-300 rounded-l"
+            type="text"
+            placeholder="Write you text here.."
+          ></input>
+          <button id="btn" class="w-full bg-blue-600 text-white mt-4 p-3 rounded-r hover:bg-blue-700">
+            Speak
+          </button> 
+</div>
+
+
+
+
+<script>
+
+const input = document.querySelector('#input')
+const button = document.querySelector('#btn')
+
+
+const textToSpech = () =>{
+    let text = input.value;
+    const voice = new SpeechSynthesisUtterance(text)
+    window.speechSynthesis.speak(voice)
+}
+
+button.addEventListener('click', textToSpech)
+
+</script>
 </body>
 
 
